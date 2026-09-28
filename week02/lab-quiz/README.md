@@ -1,5 +1,4 @@
 # Lab 02 - Purchase Quote
-
 This program calculates the final total for two items, including subtotal, tax, and delivery fee.
 
 ## Why convert input() before arithmetic?

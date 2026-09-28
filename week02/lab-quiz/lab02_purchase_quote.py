@@ -1,12 +1,3 @@
-
-# labe2_purchase_quote.py
-
-# Neden input() aritmetik işlemden önce dönüştürülmelidir?
-# Açıklama: input() fonksiyonu kullanıcıdan gelen veriyi her zaman string (metin) 
-# tipinde alır. Stringler üzerinde matematiksel toplama veya çarpma yapılamaz 
-# (string çarpımı metni tekrarlar, toplama ise uç uca ekler). Bu yüzden sayısal 
-# işlemler için int() veya float() dönüşümü zorunludur.
-
 # 1. Ürün Bilgileri
 item1_name = input("Enter first item name: ")
 item1_qty = int(input(f"Enter quantity for {item1_name}: "))

@@ -18,3 +18,16 @@
 * Prompt Used: "Write a Python program named grade_calculator.py that runs an infinite while True loop. Ask for student name (or q to quit with break) and score. Validate score between 0-100 with continue, assign letter grades (A-F), and calculate average score rounded to 2 decimal places after the loop ends."
 * What did you change?: I changed the score input to simple integer and fixed the indentation so the average calculation stays outside the loop.
 * What does break do in your program?: In my program, break immediately stops the infinite while True loop when the user enters 'q' for the student name, allowing the program to proceed to the summary and average calculation outside the loop.
+
+---
+
+## Week 03 - AI Usage Note
+* AI Tool Used: Google Gemini
+* Prompt Used: "Write a Python cinema ticket program with while loop, input validation for age and day, discount rules, and summary statistics."
+* What did you change? I used `.lower()` to accept inputs like "WEEKEND" or "Weekday" without errors. I also checked to give the best discount first.
+* Tests:
+  - Test 1 (Age 0 - Boundary): Name: Umut, Age: 0, Day: weekday, Student: no -> Output: Umut: 0.00 TRY (Free)
+  - Test 2 (Age 25 - Boundary): Name: Zeynep, Age: 25, Day: weekend, Student: yes -> Output: Zeynep: 175.00 TRY (Student)
+  - Test 3 (Age 12 - Boundary): Name: Beyza, Age: 12, Day: weekday, Student: yes -> Output: Beyza: 120.00 TRY (Child)
+* Why does the order of the rules matter? 
+- Because Python checks `if/elif` lines from top to bottom and stops at the first true condition. If the student rule was above the child rule, a 10-year-old student would get 30% discount instead of the 40% child discount.

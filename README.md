@@ -24,7 +24,7 @@
 ## Week 03 - AI Usage Note
 * AI Tool Used: Google Gemini
 * Prompt Used: "Write a Python cinema ticket program with while loop, input validation for age and day, discount rules, and summary statistics."
-* What did you change? I used `.lower()` to accept inputs like "WEEKEND" or "Weekday" without errors. I also checked to give the best discount first.
+* What did you change? I used ".lower()" to accept inputs like "WEEKEND" or "Weekday" without errors. I also checked to give the best discount first.
 * Tests:
   - Test 1 (Age 0 - Boundary): Name: Umut, Age: 0, Day: weekday, Student: no -> Output: Umut: 0.00 TRY (Free)
   - Test 2 (Age 25 - Boundary): Name: Zeynep, Age: 25, Day: weekend, Student: yes -> Output: Zeynep: 175.00 TRY (Student)

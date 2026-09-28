@@ -1,23 +1,14 @@
-# Lab 02 - Purchase Quote Program
+# Lab 02 - Purchase Quote
 
-This program calculates a two-item purchase quote by taking item names, quantities, unit prices, delivery fee, and tax percentage from the user.
+This program calculates the final total for two items, including subtotal, tax, and delivery fee.
 
-## Acceptance Checks & Conceptual Questions
+## Why convert input() before arithmetic?
+The `input()` function returns data as a string. In Python, you cannot perform mathematical calculations on strings. For example, multiplying a string repeats the text instead of doing math (`"5" * 2` becomes `"55"`). We must convert inputs using `int()` for quantities and `float()` for money values to calculate prices correctly.
 
-### Why `input()` must be converted before arithmetic?
-The `input()` function in Python always captures user data as a `string` (text). In Python, arithmetic operations behave differently or fail on strings:
-- Multiplying a string duplicates text (e.g., `'10' * 2 = '1010'`).
-- Adding strings concatenates them rather than summing numerical values.
+## Test Results and Improvements
+- **Test:** Ran the program with 2 x 50 TRY and 1 x 80 TRY, 20 TRY delivery fee, and 10% tax. The output was 218.00 TRY, matching the expected total.
+- **Change:** Added `:.2f` formatting to currency outputs so numbers always display with two decimal places.
 
-Therefore, explicit type conversion using `int()` for quantities and `float()` for monetary values is necessary to perform mathematical calculations.
-
-## Testing & Changes
-
-- **Test Run:** Tested with Item 1 (2 x 50 TRY), Item 2 (1 x 80 TRY), Delivery (20 TRY), and Tax (10%). Subtotal was calculated as 180.00 TRY, Tax as 18.00 TRY, resulting in an expected final total of 218.00 TRY.
-- **Change Made After Testing:** Formatted all monetary outputs using `:.2f` to ensure values consistently print with exactly two decimal places (e.g., `218.00 TRY` instead of `218.0 TRY`).
-
-## Stretch Task: Error Handling
-
-- **Error Observed:** Entering non-numeric characters (e.g., letters) for the quantity input raises a `ValueError: invalid literal for int() with base 10: ...` and terminates the program execution.
-- **Handling in Later Versions:** This can be handled gracefully by enclosing user inputs inside a `try-except ValueError` block combined with a `while` loop, reprompting the user until valid numeric input is provided.
-  
+## Stretch Task
+- **Error:** Entering letters for quantity causes a `ValueError` because text cannot be converted into an integer.
+- **Improvement:** In a future version, this can be handled using a `try-except` block inside a loop to keep prompting the user until a valid number is entered.

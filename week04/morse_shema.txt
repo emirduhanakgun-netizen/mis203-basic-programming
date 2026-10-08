@@ -1,0 +1,40 @@
+* Program Flowchart:
+[START]
+   │
+   ▼
+STEP 1: Import Libraries & Define Data Structure
+   ├── Import 'time' and 'winsound' modules.
+   └── Define a dictionary mapping characters, Turkish letters, and punctuation to Morse codes.
+   │
+   ▼
+STEP 2: Capture User Input
+   └── Prompt user via input() for the text message.
+   └── Validate input (if empty, alert user and terminate execution).
+   │
+   ▼
+STEP 3: Text Normalization & Preprocessing
+   ├── Convert input string to uppercase (.upper()).
+   └── Match character formatting against dictionary keys.
+   │
+   ▼
+STEP 4: Iterate Over Characters (Outer Loop - Letters)
+   ├── Check each character in the normalized text:
+   │    ├── If space (' '): Print '/ ' and pause for word boundary (time.sleep(0.3)).
+   │    └── If valid key: Fetch corresponding Morse sequence from dictionary.
+   │
+   ▼
+STEP 5: Symbol Playback & Terminal Animation (Inner Loop - Symbols)
+   ├── Process each symbol ('.' or '-') in sequence:
+   │    ├── Print symbol synchronously (end='', flush=True).
+   │    ├── If dot ('.'): Play high-frequency short beep (350 ms).
+   │    ├── If dash ('-'): Play high-frequency sustained beep (850 ms).
+   │    └── Apply cooldown pause between symbols (time.sleep(0.19)).
+   │
+   └── Character Completion: Print trailing space and apply letter pause (time.sleep(0.21)).
+   │
+   ▼
+STEP 6: Terminate Communication
+   └── Display "\nCommunication Completed" on terminal.
+   │
+   ▼
+[END]
